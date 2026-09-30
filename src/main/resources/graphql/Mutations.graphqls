@@ -1,0 +1,17 @@
+type Mutation {
+    saveCreator(creator: CreatorRequest): Creator
+    saveVideo(video: VideoRequest): Video
+}
+
+input VideoRequest {
+    name: String
+    url: String
+    description: String
+    datePublication: String
+    creator: CreatorRequest # Le sous-objet créateur
+}
+
+input CreatorRequest {
+    name: String
+    email: String
+}
